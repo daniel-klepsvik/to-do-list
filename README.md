@@ -1,36 +1,34 @@
-# 📝 My First Python Project: CLI To-Do List
+# 📝 My Python Journey: CLI To-Do List (V2.0)
 
-## 🌟 Why I Built This
-This is my very first official Python project! I chose to build a To-Do List because the concept is both interesting and genuinely useful for my own daily organization. 
+## 🌟 Evolution of the Project
+This project started as a simple script to learn Python basics. Since then, I have refactored it into a **professional, modular application** that handles data persistence and robust error checking. 
 
-It has been incredibly cool to see my newly acquired programming skills come to life. Seeing a blank file turn into a tool that handles data and logic was fascinating to me. I’m proud of how I tackled input validation to make the app feel professional and robust.
+Watching this transition from a "temporary" list to a tool that actually saves my data to a hard drive has been the most exciting part of my coding journey so far
 
-## 🚀 Features
-* **Add Tasks:** Quickly append new items to the list.
-* **View Tasks:** See current tasks with clean, human-friendly numbering (starting at 1).
-* **Smart Removal:** Delete tasks by their number using `.pop()` for precise data management.
-* **Error Resilience:** I built `try/except` blocks to handle "nonsense" inputs (like letters or symbols) without the program crashing.
-* **User-Centric Flow:** Includes "escape hatches" that allow you to cancel an action and return to the main menu.
+## 🚀 Key Upgrades (V2.0)
+* **Data Persistence:** I moved beyond temporary memory. Tasks are now automatically saved to and loaded from `to_do_list.json`.
+* **Modular Architecture:** I separated the code into `to_do_list.py` and `storage.py`. This makes the code cleaner and follows the "Separation of Concerns" principle.
+* **Error Resilience:** I implemented `try/except` blocks to handle missing files and "nonsense" user inputs (like letters where numbers should be) without the program crashing.
+* **Refined Logic:** Using "Truthiness" (`if not tasks`) and centralized functions to keep the code DRY (Don't Repeat Yourself).
 
-## 🛠️ How it Works
-This project uses several core Python concepts that I've been learning:
-- **Loops:** A `while True` loop keeps the application alive.
-- **Data Structures:** Uses a `list` to store tasks.
-- **Exception Handling:** Uses `try/except` to catch `ValueError`.
-- **Logic:** Uses `if/elif/else` statements combined with `.lower()` to handle diverse user inputs.
+## 🛠️ The Tech Stack
+- **Persistence:** `json` module for reading/writing structured data.
+- **Modularity:** Custom module imports (`import storage`) for organized code.
+- **Logic:** `enumerate()` for human-friendly indexing, `.lower()` for case-insensitive commands, and list manipulation.
+- **Exception Handling:** Catching `FileNotFoundError` and `ValueError`.
 
 ## 🖥️ How to Run
-1. Ensure you have Python installed on your machine.
-2. Clone this repository to your local computer.
-3. Open your terminal and run:
+1. Ensure you have Python installed.
+2. Clone this repository.
+3. Run the application:
    ```bash
-   python todo.py
+   python to_do_list.py
 
 ## 🗺️ Project Roadmap & Future Improvements
-I view this as "Version 1.0." As I continue my Python journey, I plan to upgrade this tool with the following milestones:
+I view this as "Version 2.0." As I continue my Python journey, I plan to upgrade this tool with the following milestones:
 
-- [ ] **Phase 1: Data Persistence** 💾  
-  Currently, tasks disappear when the program closes. I plan to learn how to save them to a `.txt` or `.json` file so they stay saved.
+- [x] **Phase 1: Data Persistence** 💾  
+  Currently, tasks disappear when the program closes. I plan to add a way to save them to a `.json` file so they stay saved.
 - [ ] **Phase 2: Task Editing** ✏️  
   Add an "Edit" option so users can modify existing tasks without deleting them.
 - [ ] **Phase 3: Priority & Dates** 📅  
