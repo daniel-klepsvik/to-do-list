@@ -3,7 +3,7 @@
 ## 🌟 Why I Built This
 This is my very first official Python project! I chose to build a To-Do List because the concept is both interesting and genuinely useful for my own daily organization. 
 
-It has been incredibly cool to see my newly acquired programming skills come to life. Seeing a blank file turn into a tool that handles data and logic is fascinating to me. I’m proud of how I tackled input validation to make the app feel professional and robust.
+It has been incredibly cool to see my newly acquired programming skills come to life. Seeing a blank file turn into a tool that handles data and logic was fascinating to me. I’m proud of how I tackled input validation to make the app feel professional and robust.
 
 ## 🚀 Features
 * **Add Tasks:** Quickly append new items to the list.
