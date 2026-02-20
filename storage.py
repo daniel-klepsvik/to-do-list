@@ -1,7 +1,16 @@
 import json
 
+FILENAME = 'tasks.json'
+
+def load_tasks():
+    try:
+        with open(FILENAME, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
+
 def save_tasks(tasks):
-    with open('to_do_list.json', 'w', encoding='utf-8') as f:
+    with open(FILENAME, 'w', encoding='utf-8') as f:
         json.dump(tasks, f, indent=4)
 
 def view_tasks(tasks):

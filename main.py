@@ -1,13 +1,7 @@
 import json
 import storage
 
-try:
-    with open('to_do_list.json', 'r', encoding='utf-8') as f:
-        tasks = json.load(f)
-except FileNotFoundError:
-    print('File Not Found')
-    tasks = []
-
+tasks = storage.load_tasks()
 storage.view_tasks(tasks)
 while True:
     print('\n--- Main Menu ---')
