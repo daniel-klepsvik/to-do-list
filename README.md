@@ -26,7 +26,7 @@ This project uses several core Python concepts that I've been learning:
    ```bash
    python todo.py
 
-   ## 🗺️ Project Roadmap & Future Improvements
+## 🗺️ Project Roadmap & Future Improvements
 I view this as "Version 1.0." As I continue my Python journey, I plan to upgrade this tool with the following milestones:
 
 - [ ] **Phase 1: Data Persistence** 💾  
