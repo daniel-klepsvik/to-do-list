@@ -1,21 +1,22 @@
-# 📝 My Python Journey: CLI To-Do List (V2.0)
+# 📝 My Python Journey: CLI To-Do List (V2.1)
 
 ## 🌟 Evolution of the Project
 This project started as a simple script to learn Python basics. Since then, I have refactored it into a **professional, modular application** that handles data persistence and robust error checking. 
 
 Watching this transition from a "temporary" list to a tool that actually saves my data to a hard drive has been the most exciting part of my coding journey so far
 
-## 🚀 Key Upgrades (V2.0)
-* **Data Persistence:** I moved beyond temporary memory. Tasks are now automatically saved to and loaded from `to_do_list.json`.
-* **Modular Architecture:** I separated the code into `to_do_list.py` and `storage.py`. This makes the code cleaner and follows the "Separation of Concerns" principle.
-* **Error Resilience:** I implemented `try/except` blocks to handle missing files and "nonsense" user inputs (like letters where numbers should be) without the program crashing.
-* **Refined Logic:** Using "Truthiness" (`if not tasks`) and centralized functions to keep the code DRY (Don't Repeat Yourself).
+## 🚀 Key Upgrades (V2.1)
+* **Modular Architecture:** Fully separated the logic into `main.py` (User Interface) and `storage.py` (Data Handling). This follows the **Separation of Concerns** principle used in professional software development.
+* **Smart Data Persistence:** Tasks are automatically synced to `tasks.json`. I implemented a `load_tasks()` function that handles the initial file check and loading sequence automatically.
+* **Global Constants:** Implemented `FILENAME` constants in the storage layer. This provides a "single source of truth," making the project much easier to configure and maintain.
+* **Error Resilience:** Robust `try/except` blocks prevent crashes from missing files or "nonsense" user inputs (like entering letters where a task number is expected).
+* **Clean Code (DRY):** Optimized logic using "Truthiness" (`if not tasks`) and `enumerate()` for human-friendly indexing to keep the codebase "Don't Repeat Yourself" compliant.
 
 ## 🛠️ The Tech Stack
-- **Persistence:** `json` module for reading/writing structured data.
-- **Modularity:** Custom module imports (`import storage`) for organized code.
-- **Logic:** `enumerate()` for human-friendly indexing, `.lower()` for case-insensitive commands, and list manipulation.
-- **Exception Handling:** Catching `FileNotFoundError` and `ValueError`.
+- **Persistence:** `json` module for structured, permanent data storage.
+- **Environment Management:** Implemented a `.gitignore` to ensure the repository remains clean of `__pycache__` and local data files.
+- **Modularity:** Advanced module imports and function encapsulation to decouple logic from the main execution loop.
+- **Standardization:** Adheres to **PEP 8** naming conventions, specifically using `ALL_CAPS` for global constants.
 
 ## 🖥️ How to Run
 1. Ensure you have Python installed.
